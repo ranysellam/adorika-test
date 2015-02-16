@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add Campaign</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="tab-title">
+		<div id="add-tab-title">
+			<span class="glyphicon glyphicon-plus"></span>
+			<h3><span style="font-size:25px;">C</span>REATE NEW CAMPAIGN</h3>
+		</div>
+		<div id="review-tab-title" class="no-display">
+			<h3>REVIEW DETAILS</h3>
+		</div>
+		
+	</div> <!-- END OF UPPER LEFT DIV -->
+
+	<div class="new-nav">
+		<div class="tab-btn selected-btn" id="add-button" onclick="showAddTab()">ADD CAMPAIGN</div>
+		<div class="tab-btn" id="review-button" onclick="showReviewTab()">REVIEW</div>
+	</div>   <!-- END OF MENU -->
+	<div style="clear:both;"></div>
+	<div class="tab-header">
+		<p id="add-header"><span style="font-weight:bold;">Step 1:</span> Campaign Info</p>
+		<p class="no-display" id="review-header"><span style="font-weight:bold;">Step 2:</span> Review Campaign Info</p>
+	</div>
+	<div class="tab">
+		<form action="#" name="form" >
+			<table >
+				<tr>
+					<td>
+						<label for="campaignName">Campaign name <span style="color:red;">*</span></label>
+					</td>
+					<td>
+						<input type="text" name="name" id="campaignName" maxlength="20" >
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="budget">Daily budget</label>
+					</td>
+					<td>
+						<input  type="text" name="budget" id="budget" placeholder="Min $10/day">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="campainType">Campaign type <span style="color:red;">*</span></label>
+					</td>
+					<td>
+						<select name="type" id="campaignType" >
+							<option value="0">Dialog click to message</option>
+							<option value="1">Campaign 1</option>
+							<option value="2">Campaign 2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="startDate">Start date <span style="color:red;">*</span></label>
+					</td>
+					<td>
+						<input  type="text" name="startDate" id="startDate" placeholder="YYYY/MM/DD HH:MM" >
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="endDate">End date</label>
+					</td>
+					<td>
+						<input  type="text" name="endDate" id="endDate" placeholder="YYYY/MM/DD HH:MM">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="category">Category</label>
+					</td>
+					<td>
+						<select name="category" id="category" >
+							<option value="1">Select category...</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Platform type</label>
+					</td>
+					<td>
+						<select name="platform" id="platform" >
+							<option value="1">Select platform...</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</form>
+
+		<input onclick="checkForm()" class="btn btn-default submit" type="submit" value="ADD CAMPAIGN">
+	</div>
+</div>      <!-- END OF WRAPPER -->
+
+<script type="text/javascript" src="js/script.js"></script>	
+</body>
+</html>
